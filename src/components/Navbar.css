@@ -1,0 +1,133 @@
+
+.navbar {
+    background-color: purple;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ensure it stays on top of other content */
+    
+    /* Shadow for visual separation */
+}
+
+.main-content {
+    margin-top: 70px;
+    /* Adjust based on navbar height */
+}
+
+.menu-bars {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.main-content {
+    margin-top: 70px;
+    /* Adjust based on navbar height */
+}
+/* Sidebar Style */
+.nav-menu {
+    background-color:purple;
+    width:250px;
+    height: 100vh;
+    position: fixed;
+    left: -250px;
+    
+    top: 0;
+    transition: all 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.nav-menu-items li a {
+    text-decoration: none !important;
+    /* Remove underline */
+    color: white !important;
+    /* Force text color to white */
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-menu.active {
+    left: 0;
+    
+}
+
+.nav-menu-items {
+    padding-top: 50px;
+    list-style: none;
+}
+
+.nav-menu-items li {
+    padding: 15px 10px;
+}
+
+.nav-menu-items li:hover {
+    background-color: #660066;
+    /* Highlight when hovered */
+}
+
+.nav-text {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.nav-text span {
+    margin-left: 10px;
+}
+
+/* Navbar toggle button style */
+.navbar-toggle {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.navbar-toggle .menu-bars {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+.navbar-logo {
+    margin-left: 1430px;
+    /* Pushes the logo to the right */
+}
+
+.logo-image {
+    height: 40px;
+    /* Adjust based on your desired logo size */
+    width: auto;
+}
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+            width: 50%;
+            /* Full width on mobile */
+            height: 100%;
+            /* Full height of the screen */
+            left: -100%;
+            /* Initially hidden, shift it left to hide */
+        }
+
+    .menu-bars {
+        font-size: 1.5rem;
+    }
+    .navbar {
+            position: fixed;
+            /* Keep navbar fixed on top */
+            z-index: 11;
+        }
+         .navbar-logo {
+             margin-left:100px;
+         }
+.logo-image {
+ height: 30px;
+                   }
+.nav-menu.active {
+   left: 0;
+  }
+}
